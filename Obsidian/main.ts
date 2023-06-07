@@ -14,6 +14,9 @@ export default class MyPlugin extends Plugin {
 	settings: MyPluginSettings;
 
 	async onload() {
+		
+		console.log('onload plugin.');
+
 		await this.loadSettings();
 
 		// This creates an icon in the left ribbon.
@@ -27,7 +30,6 @@ export default class MyPlugin extends Plugin {
 		// This adds a status bar item to the bottom of the app. Does not work on mobile apps.
 		const statusBarItemEl = this.addStatusBarItem();
 		statusBarItemEl.setText('Status Bar Text');
-
 		// This adds a simple command that can be triggered anywhere
 		this.addCommand({
 			id: 'open-sample-modal-simple',
@@ -79,7 +81,7 @@ export default class MyPlugin extends Plugin {
 	}
 
 	onunload() {
-
+		console.log('onunload plugin.');
 	}
 
 	async loadSettings() {

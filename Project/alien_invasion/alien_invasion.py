@@ -18,7 +18,8 @@ def run_game():
     
     # 游戏主循环
     while True:
-        gf.check_events()
+        gf.check_events(ship)
+        ship.update()
         gf.update_screen(settings,screen,ship)
         
 run_game()

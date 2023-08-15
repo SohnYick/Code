@@ -1,6 +1,7 @@
 using System;
 class FirstProgram{
-    static void Main(){
+    static int Main(){
         Console.WriteLine("Hello,World!");
+	return 0;
     }
 }

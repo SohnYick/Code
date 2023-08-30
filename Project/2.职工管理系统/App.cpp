@@ -4,9 +4,20 @@
 int main(){
 
 	Manager mg;
-	mg.showMenu();
-
-	cout << "Hello world" << endl;
+	int choice = 0;	
+	while(true){
+		mg.showMenu();
+		cout << "请输入你的选择：";
+		cin >> choice;
+		switch(choice){
+			case 0:
+			     mg.exitSystem();
+			     break;
+			default:
+			     system("cls");
+			     break;
+		}
+	}
 
 	return 0;
 }

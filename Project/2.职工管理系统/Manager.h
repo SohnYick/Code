@@ -7,5 +7,6 @@ class Manager{
 	public:
 		Manager();
 		void showMenu();
+		void exitSystem();
 		~Manager();
 };

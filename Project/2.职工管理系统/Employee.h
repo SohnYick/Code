@@ -3,9 +3,9 @@
 #include "worker.h"
 using namespace std;
 
-class Manager:public Worker{
+class Employee:public Worker{
 	public:
-		Manager(int ID,string name);
+		Employee(int ID,string name);
 };
 
 

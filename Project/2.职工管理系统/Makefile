@@ -1,4 +1,4 @@
-appFiles = GUI.o App.o Manager.o Employee.o Boss.o
+appFiles = GUI.o App.o Manager.o Employee.o Boss.o Service.o DB.o
 
 App: $(appFiles)	
 	g++ $(appFiles) -o App.exe
@@ -18,6 +18,12 @@ Employee.o: Employee.cpp Employee.h
 
 Boss.o: Boss.cpp Boss.h
 	g++ -c Boss.cpp	
+
+Service.o: Service.cpp Service.h
+	g++ -c Service.cpp
+
+DB.o: DB.h DB.cpp
+	g++ -c DB.cpp
 
 clean:
 	rm -f *.o *.exe

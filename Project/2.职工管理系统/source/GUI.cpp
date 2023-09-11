@@ -8,9 +8,16 @@ void GUI::showMenu(){
 	cout << "*\t3.删除职工\t*" << endl;
 	cout << "*\t4.修改职工\t*" << endl;
 	cout << "*\t5.查询职工\t*" << endl;
-	cout << "*\t6.查询职工\t*" << endl;
 	cout << "*\t0.退出系统\t*" << endl;
 }
+
+int GUI::getChoice(){
+	cout << "请输入你的选择：" ;
+	int choice = 0;
+	cin >> choice;	
+	return choice;
+}
+
 void GUI::showWorker(Worker * worker){
 	
 	cout << "-----------" << endl;

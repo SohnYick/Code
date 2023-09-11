@@ -1,5 +1,4 @@
 #pragma once
-#include <iostream>
 #include "Worker.h"
 
 using namespace std;
@@ -9,6 +8,10 @@ class GUI{
 		GUI();
 		void showMenu();
 		void showWorker(Worker * worker);
+		int getChoice();
+
 		void exitSystem();
 		~GUI();
+
+		string information;
 };

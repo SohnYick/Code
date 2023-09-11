@@ -4,21 +4,22 @@
 #include "Employee.h"
 #include "Manager.h"
 #include "Boss.h"
+#include "DB.h"
 
 int main(){
 
 	GUI ui;
-	Worker * worker = new Manager(1,"John");
-	ui.showWorker(worker);
-
-	int choice = 0;	
+	DB db;
 	while(true){
 		ui.showMenu();
-		cout << "请输入你的选择：";
-		cin >> choice;
-		switch(choice){
+		switch(ui.getChoice()){
 			case 0:
 			     ui.exitSystem();
+			     break;
+			case 1:
+			     db.insert(new Employee(1,"Sohn"));		     
+			     break;
+			case 2:
 			     break;
 			default:
 			     system("cls");

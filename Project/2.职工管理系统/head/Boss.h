@@ -4,7 +4,8 @@
 using namespace std;
 
 class Boss:public Worker{
-	Boss(int ID,string name);
+	public:
+		Boss(int ID,string name);
 };
 
 
